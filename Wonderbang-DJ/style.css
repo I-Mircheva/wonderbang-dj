@@ -17,12 +17,12 @@ html, body {
   height: 100%;
 }
 #header {
-  text-align: left;
-  background-color: #AFDED4;
+  /*text-align: left;*/
+  /*background-color: #AFDED4;*/
 }
 .logo {
-  width: auto;
-  padding: 2%;
+  /*width: auto;*/
+  /*padding: 2%;*/
 }
 img {
   width: 100%;

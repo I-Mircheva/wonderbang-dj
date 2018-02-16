@@ -12,7 +12,8 @@ var imageObj = new Image();
 imageObj.onload = function() {
     c.drawImage(imageObj, 0, 0);
 };
-imageObj.src = 'https://upload.wikimedia.org/wikipedia/commons/7/75/Vinyl_record.svg';
+imageObj.src = 'https://media.sundazed.com/media/images/LP-5433-vinyl.png';
+
 
 var mouse = {x: undefined, y: undefined};
 var maxPullDistance = canvas.height;
@@ -54,6 +55,7 @@ function Bar(x, width, delay) {
       this.height -= (this.height - Math.abs(Math.sin(this.timer) * canvas.height / 2.5)) * 0.12;
 
     }
+
     this.draw();
   }
 
@@ -88,6 +90,7 @@ function animate() {
   window.requestAnimationFrame(animate);
   c.fillStyle = 'rgba(0,0,0,0.1)';
   c.fillRect(0, 0, canvas.width, canvas.height);
+  c.drawImage(imageObj, 10, 3,  canvas.width * 0.1, canvas.height);
 
   bars.forEach(function(bar) {
     bar.update();

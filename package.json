@@ -1,6 +1,0 @@
-{
-  "name": "Wonderbang",
-  "private": true,
-  "dependencies": {},
-  "engines" : { "node": "6.2.2" }
-}

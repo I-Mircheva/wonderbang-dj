@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 
+# To manage environment variables locally
+gem 'dotenv'
 # https://richonrails.com/articles/google-authentication-in-ruby-on-rails/
 gem "omniauth-google-oauth2", "~> 0.2.1"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

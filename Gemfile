@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem 'rspotify'
 # To manage environment variables locally
 gem 'dotenv'
 # https://richonrails.com/articles/google-authentication-in-ruby-on-rails/

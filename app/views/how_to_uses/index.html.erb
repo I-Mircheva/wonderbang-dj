@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>How To Uses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @how_to_uses.each do |how_to_use| %>
+      <tr>
+        <td><%= how_to_use.content %></td>
+        <td><%= link_to 'Show', how_to_use %></td>
+        <td><%= link_to 'Edit', edit_how_to_use_path(how_to_use) %></td>
+        <td><%= link_to 'Destroy', how_to_use, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New How To Use', new_how_to_use_path %>

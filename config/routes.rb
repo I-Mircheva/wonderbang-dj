@@ -1,5 +1,9 @@
 
 Rails.application.routes.draw do
+  resources :faqs
+  resources :contact_us
+  resources :how_to_uses
+  resources :abouts
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'

@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116478968-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-116478968-1');
+  </script>
+
+  <meta charset="UTF-8">
+ <style>
+      .has-bg-img { background: url('https://image.ibb.co/fDXFiy/mine.png')center center; background-size:cover; }
+  </style>
+    <title> DJW </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+<body>
+  <section class="hero is-fullheight has-bg-img">
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+              <a href="#">
+                <img  class="navbar-item" src="https://image.ibb.co/m7RY3y/logo.png" alt="Logo" width="182" height="148">
+              </a>
+            <span class="navbar-burger burger" data-target="navbarMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+              <div class="navbar-item">
+                  <% if !current_user %>
+                      <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+                  <% else %>
+                      <%= link_to "Sign out", signout_path, id: "sign_out" %>
+                  <% end %>
+              </div>
+              <a class="navbar-item is-hidden-desktop-only" href="https://github.com/I-Mircheva/wonderbang-dj" target="_blank">
+                <span class="icon" style="color: #fff;">
+                  <i class="fab fa-2x fa-github"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+        <% if current_user %>
+  <a class="button is-danger is-outlined" style="margin-left: 15px">
+  <p> Signed in as  <strong><%= current_user.name %></strong>!</p><br>
+  </a>
+  <% end %>
+    </div>
+
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="column is-6 is-offset-3">
+          <h1 class="title is-size-2-desktop has-text-white" style="padding-bottom: 20px">
+            Make your own playlist!
+          </h1>
+          <h2 class="subtitle has-text-white">
+             This is the best software platform for aggreagationing songs from different platforms in a single playlist. Come join us!
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="content has-text-centered">
+      <p>
+        <strong><font color=" #ff6700">&copy; Simeon Chakarov and Ivona Mircheva 2018</font></strong>
+      </p>
+    </div>
+</section>
+</body>
+</html>

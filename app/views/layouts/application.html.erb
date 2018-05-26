@@ -23,42 +23,65 @@
    <body>
       <section class="hero is-fullheight has-bg-img">
          <div class="hero-head">
-            <nav class="navbar">
-               <div class="container">
-                  <div class="navbar-brand">
-                     <a href="#">
-                     <img  class="navbar-item" src="https://thumb.ibb.co/mGXeFo/logo.png"  width="104" height="104">
-                     </a>
-                       <span class="navbar-burger burger" data-target="navbarMenu"  style=" color: hsl(348, 100%, 61%)">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                       </span>
-                  </div>
-                  <div  id="navbarMenu" class="navbar-menu">
-                     <div class="navbar-end">
-                        <div class="navbar-item">
-                           <% if !current_user %>
-                           <%= link_to '<button type="button" class="button is-danger is-outlined">Sign in with Google</button>'.html_safe, "/auth/google_oauth2", id: "sign_in" %>
-                           <% else %>
-                           <%= link_to '<button type="button" class="button is-danger is-outlined">Sign out</button>'.html_safe, signout_path, id: "sign_out" %>
-                           <% end %>
-                        </div>
-                        <a class="navbar-item is-hidden-desktop-only" href="https://github.com/I-Mircheva/wonderbang-dj" target="_blank" >
-                        <span class="icon"  style="color: hsl(348, 100%, 61%)">
-                        <i class="fab fa-2x fa-github"></i>
+         <nav class="navbar">
+            <div class="container">
+               <div class="navbar-brand">
+                  <a href="#">
+                  <img  class="navbar-item" src="https://image.ibb.co/m7RY3y/logo.png"  width="150" height="150">
+                  </a>
+                  <span class="navbar-burger burger" data-target="navbarMenu"  style=" color: hsl(348, 100%, 61%)">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  </span>
+               </div>
+               <div  id="navbarMenu" class="navbar-menu">
+                <div class="navbar-item">
+                        <% if current_user %>
+                        <%= link_to '<button type="button" class="button is-warning is-outlined"><span class="icon">
+                           <i class="fas fa-music"></i>
+                           </span>  &nbsp My Playlists</button>'.html_safe, "/auth/google_oauth2", id: "sign_in" %>
+                        <% end %>
+                     </div>
+                  <div class="navbar-end">
+                    <div class="navbar-item">
+                        <a class="button is-link is-outlined">
+                        <span class="icon is-small">
+                        <i class="fas fa-bell"></i>
                         </span>
-                        </a>
+                        &nbsp Contact us</a>
+                     </div>
+                     <div class="navbar-item">
+                        <a class="button is-primary is-outlined">
+                        <span class="icon is-small">
+                        <i class="fas fa-check"></i>
+                        </span>
+                        &nbsp How to use</a>
+                     </div>
+                     <div class="navbar-item">
+                        <% if !current_user %>
+                        <%= link_to '<button type="button" class="button is-danger is-outlined"><span class="icon">
+                           <i class="fab fa-google"></i>
+                           </span>  &nbsp Sign in</button>'.html_safe, "/auth/google_oauth2", id: "sign_in" %>
+                        <% else %>
+                        <%= link_to '<button type="button" class="button is-danger is-outlined">Sign out</button>'.html_safe, signout_path, id: "sign_out" %>
+                        <% end %>
+                     </div>
+                     <div class="navbar-item">
+                        <a class="button is-success is-outlined"  href="https://github.com/I-Mircheva/wonderbang-dj"><span class="icon">
+                        <i class="fab fa-github"></i>
+                        </span>
+                        <span>&nbspGitHub</span></a>
                      </div>
                   </div>
                </div>
-            </nav>
-            <% if current_user %>
-            <a class="button is-danger is-rounded" style="float: right; margin-right: 15px;">
-               <p> Signed in as  <strong><%= current_user.name %></strong>!</p>
-               <br>
-            </a>
-            <% end %>
+         </nav>
+         <% if current_user %>
+         <a class="button is-danger is-rounded" style="float: right; margin-right: 15px;">
+         <p> Signed in as  <strong><%= current_user.name %></strong>!</p>
+         <br>
+         </a>
+         <% end %>
          </div>
          <div class="hero-body">
             <div class="container has-text-centered">
@@ -74,20 +97,20 @@
          </div>
          <div class="content has-text-centered">
             <p>
-               <strong><font style="color: #ff3860">&copy; Simeon Chakarov and Ivona Mircheva 2018</font></strong>
+               <strong><font style="color: #c28285">&copy; Simeon Chakarov and Ivona Mircheva 2018</font></strong>
             </p>
          </div>
       </section>
       <script type="text/javascript">
-      (function() {
-        var burger = document.querySelector('.burger');
-        var nav = document.querySelector('#'+burger.dataset.target);
-        burger.addEventListener('click', function(){
-          burger.classList.toggle('is-active');
-          nav.classList.toggle('is-active');
-        });
-      })();
-    </script>
+         (function() {
+           var burger = document.querySelector('.burger');
+           var nav = document.querySelector('#'+burger.dataset.target);
+           burger.addEventListener('click', function(){
+             burger.classList.toggle('is-active');
+             nav.classList.toggle('is-active');
+           });
+         })();
+      </script>
    </body>
 </html>
 

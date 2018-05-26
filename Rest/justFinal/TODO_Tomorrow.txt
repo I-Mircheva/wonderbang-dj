@@ -1,5 +1,0 @@
-1. Static pages such as FAQs, Contact Us, How to Use
-2. Fix Google Login 
-3. Make Spotify login
-4. Make Facebook login
-5. Youtube API + gem and research

@@ -1,7 +1,0 @@
-{
-  "name": "omni_new",
-  "private": true,
-  "dependencies": {}
-  "start": "node scripts/start.js" => 
-"start": "set HTTPS=true&&node scripts/start.js"
-}

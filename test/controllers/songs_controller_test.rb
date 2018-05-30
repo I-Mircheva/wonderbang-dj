@@ -6,7 +6,7 @@ class SongsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
-    get songs_url
+    get playlist_songs_url(@playist)
     assert_response :success
   end
 
@@ -17,7 +17,7 @@ class SongsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create song" do
     assert_difference('Song.count') do
-      post songs_url, params: { song: { playlist_id: @song.playlist_id, provider: @song.provider, uuid: @song.uuid } }
+      post playlist_songs_url(@playist), params: { song: { playlist_id: @song.playlist_id, provider: @song.provider, uuid: @song.uuid } }
     end
 
     assert_redirected_to song_url(Song.last)
@@ -43,6 +43,6 @@ class SongsControllerTest < ActionDispatch::IntegrationTest
       delete song_url(@song)
     end
 
-    assert_redirected_to songs_url
+    assert_redirected_to playlist_songs_url(@playist)
   end
 end

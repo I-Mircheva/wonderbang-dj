@@ -25,6 +25,7 @@ class PlaylistsController < ApplicationController
   # POST /playlists.json
   def create
     @playlist = Playlist.new(playlist_params)
+    @playlist.user = current_user
 
     respond_to do |format|
       if @playlist.save
@@ -54,7 +55,9 @@ class PlaylistsController < ApplicationController
   # DELETE /playlists/1
   # DELETE /playlists/1.json
   def destroy
+    @playlist.songs.delete_all
     @playlist.destroy
+
     respond_to do |format|
       format.html { redirect_to playlists_url, notice: 'Playlist was successfully destroyed.' }
       format.json { head :no_content }

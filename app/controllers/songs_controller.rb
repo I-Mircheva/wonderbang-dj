@@ -1,9 +1,10 @@
 class SongsController < ApplicationController
   before_action :set_song, only: [:show, :edit, :update, :destroy]
+  before_action :set_playlist, only: [:create, :new, :show, :edit, :update, :destroy]
 
   # GET /songs
   # GET /songs.json
-  def index
+  def index   
     @songs = Song.all
   end
 
@@ -25,6 +26,7 @@ class SongsController < ApplicationController
   # POST /songs.json
   def create
     @song = Song.new(song_params)
+    @song.playlist = @playlist
 
     respond_to do |format|
       if @song.save
@@ -56,7 +58,7 @@ class SongsController < ApplicationController
   def destroy
     @song.destroy
     respond_to do |format|
-      format.html { redirect_to songs_url, notice: 'Song was successfully destroyed.' }
+      format.html { redirect_to playlist_songs_url(@playist), notice: 'Song was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -65,6 +67,9 @@ class SongsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_song
       @song = Song.find(params[:id])
+    end 
+    def set_playlist
+      @playlist = Playlist.find(params[:playlist_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

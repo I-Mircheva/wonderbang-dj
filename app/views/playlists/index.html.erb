@@ -6,7 +6,7 @@
               <a href="/">
                 <img  class="navbar-item" src="https://image.ibb.co/m7RY3y/logo.png"  width="150" height="150">
                 </a>
-                <span class="navbar-burger burger" data-target="navbarMenu"  style=" color: hsl(348, 100%, 61%)">
+                <span class="navbar-burger burger" data-target="navbarMenu" style="color: hsl(348, 100%, 61%)">
                   <span></span>
                   <span></span>
                   <span></span>
@@ -41,14 +41,14 @@
                 </div>
               </div>
             </nav>
-   <% if current_user %>
-      <div class="column is-7 is-offset-4">
-         <a class="button is-success" style="float: right; margin-right: 15px;">
-            <p> Signed in as  <strong><%= current_user.name %></strong>!</p>
-            <br>
-         </a>
-      </div>
-   <% end %>
+             <% if current_user %>
+                <div class="column is-7 is-offset-4">
+                   <a class="button is-success" style="float: right; margin-right: 15px;">
+                      <p> Signed in as  <strong><%= current_user.name %></strong>!</p>
+                      <br>
+                   </a>
+                </div>
+             <% end %>
 
 
               <section class="section">
@@ -66,7 +66,7 @@
                           </div>
                           <div class="tile is-parent">
                             <article class="tile is-child">
-                                <%= link_to "<button class=\"button is-success is-outlined is-centered\" > Add Song </button>".html_safe , new_song_path %>
+                                <%= link_to "<button class=\"button is-success is-outlined is-centered\" > Add Song </button>".html_safe , new_playlist_song_path(playlist.id) %>
                             </article>
                           </div>
                           <div class="tile is-parent">
@@ -88,8 +88,6 @@
                   </div>
                 </div>
               </section>
-
-              <script src="../js/bulma.js"></script>
             </section>
             <script type="text/javascript">
       (function() {

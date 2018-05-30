@@ -64,7 +64,7 @@
               <%= link_to "<button class=\"button is-primary is-outlined is-centered\" > Edit </button>".html_safe , edit_playlist_path(@playlist) %>
             <div class="tile is-parent">
               <article class="tile is-child">
-                  <%= link_to "<button class=\"button is-success is-outlined is-centered\" > Add Song </button>".html_safe , new_song_path %>
+                  <%= link_to "<button class=\"button is-success is-outlined is-centered\" > Add Song </button>".html_safe , new_playlist_song_path(@playlist.id) %>
               </article>
             </div>
         </div>

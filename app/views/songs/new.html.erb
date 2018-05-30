@@ -59,10 +59,10 @@
   <div class="column is-three-fifths is-offset-2">
 
     <h1 class="title has-text-light"> Add Song</h1>
-    <%= render 'form', song: @song %>
+    <%= render 'form', playlist: @playlist, song: @song %>
     <div class="actions">
       <p class="control">
-        <%= link_to 'Back', songs_path, :class => 'button is-light' %>
+        <%= link_to 'Back', playlist_path(@playlist), :class => 'button is-light' %>
       </p>
     </div>
 

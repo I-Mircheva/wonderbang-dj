@@ -1,4 +1,5 @@
-<%= form_with(model: song, local: true) do |form| %>
+<%= form_with(model: song, url: [playlist, song]) do |form| %>
+
   <% if song.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(song.errors.count, "error") %> prohibited this song from being saved:</h2>
@@ -25,14 +26,6 @@
         <%= form.text_field :uuid, id: :song_uuid, class: "input" %>
     </p>
   </div>
-
-  <div class="field has-text-light">
-  <p class="control">
-    <%= form.label :playlist_id %>
-    <%= form.text_field :playlist_id, id: :song_playlist_id , class: "input" %>
-    </p>
-  </div>
-
 
 <div class="actions has-text-light">
   <p class="control">

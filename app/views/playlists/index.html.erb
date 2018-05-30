@@ -3,7 +3,7 @@
         <nav class="navbar">
           <div class="container">
             <div class="navbar-brand">
-              <a href="#">
+              <a href="/">
                 <img  class="navbar-item" src="https://image.ibb.co/m7RY3y/logo.png"  width="150" height="150">
                 </a>
                 <span class="navbar-burger burger" data-target="navbarMenu"  style=" color: hsl(348, 100%, 61%)">
@@ -19,7 +19,7 @@
                       <span class="icon is-small">
                         <i class="fas fa-bell"></i>
                       </span>
-                &nbsp Contact us
+                       &nbsp Contact us
                     </a>
                   </div>
                   <div class="navbar-item"><% if !current_user %><%= link_to '
@@ -41,22 +41,21 @@
                 </div>
               </div>
             </nav>
-            <% if current_user %>
-            <a class="button is-danger is-rounded" style="float: right; margin-right: 15px;">
-              <p> Signed in as  
-                <strong>
-                  <%= current_user.name %>
-                </strong>!
-              </p>
-              <br>
-              </a>
-              <% end %>
+   <% if current_user %>
+      <div class="column is-7 is-offset-4">
+         <a class="button is-success" style="float: right; margin-right: 15px;">
+            <p> Signed in as  <strong><%= current_user.name %></strong>!</p>
+            <br>
+         </a>
+      </div>
+   <% end %>
 
 
               <section class="section">
                 <div class="container has-text-centered">
                   <div class="columns is-mobile">
                     <div class="column is-three-fifths is-offset-one-fifth">
+                      <p id="notice" class="has-text-warning"><%= notice %></p> 
                       <p class="has-text-light title"> All Of Your Playlists </p>
                       <% current_user.playlists.each do |playlist| %>
                         <div class="tile is-ancestor table">
@@ -67,12 +66,17 @@
                           </div>
                           <div class="tile is-parent">
                             <article class="tile is-child">
+                                <%= link_to "<button class=\"button is-success is-outlined is-centered\" > Add Song </button>".html_safe , new_song_path %>
+                            </article>
+                          </div>
+                          <div class="tile is-parent">
+                            <article class="tile is-child">
                                 <%= link_to "<button class=\"button is-primary is-outlined is-centered\" > Edit it </button>".html_safe , edit_playlist_path(playlist) %>
                             </article>
                           </div>
                           <div class="tile is-parent">
                             <article class="tile is-child">
-                                <%= link_to "<button class=\"button is-danger is-outlined is-centered\" > Destroy </button>".html_safe , playlist, method: :delete, data: { confirm: 'Are you sure?' } %>
+                               <%= link_to "<button class=\"button is-danger is-outlined is-centered\" > Destroy </button>".html_safe , playlist, method: :delete, data: { confirm: 'Are you sure?' } %>
                             </article>
                           </div>
                         </div>

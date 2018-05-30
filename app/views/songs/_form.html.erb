@@ -11,22 +11,34 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :provider %>
-    <%= form.select :provider, options_for_select([['Youtube', 'youtube'], ['Spotify', 'spotify']]), id: :provider %>
+<div class="field has-text-light">
+  <p class="control">
+    <span class="select">
+        <%= form.select :provider, options_for_select([['Youtube', 'youtube'], ['Spotify', 'spotify']]), id: :provider  %>
+        </span>
+    </p>
   </div>
 
-  <div class="field">
-    <%= form.label :uuid %>
-    <%= form.text_field :uuid, id: :song_uuid %>
+  <div class="field has-text-light">
+  <p class="control">
+     <%= form.label "Song ID" %>
+        <%= form.text_field :uuid, id: :song_uuid, class: "input" %>
+    </p>
   </div>
 
-  <div class="field">
+  <div class="field has-text-light">
+  <p class="control">
     <%= form.label :playlist_id %>
-    <%= form.text_field :playlist_id, id: :song_playlist_id %>
+    <%= form.text_field :playlist_id, id: :song_playlist_id , class: "input" %>
+    </p>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+
+<div class="actions has-text-light">
+  <p class="control">
+    <%= form.submit 'Add Song',  :class => 'button is-success' %>
+
+  </p>
+</div>
+<br>
 <% end %>

@@ -3,7 +3,7 @@
   <nav class="navbar">
     <div class="container">
       <div class="navbar-brand">
-        <a href="#">
+        <a href="/">
         <img  class="navbar-item" src="https://image.ibb.co/m7RY3y/logo.png"  width="150" height="150">
         </a>
         <span class="navbar-burger burger" data-target="navbarMenu"  style=" color: hsl(348, 100%, 61%)">
@@ -13,20 +13,20 @@
         </span>
       </div>
       <div id="navbarMenu" class="navbar-menu">
-        <div class="navbar-item">
-          <% if current_user %>
-          <%= link_to '<button type="button" class="button is-warning is-outlined"><span class="icon">
-            <i class="fas fa-music"></i>
-            </span>  &nbsp My Playlists</button>'.html_safe, "/auth/google_oauth2", id: "sign_in" %>
-          <% end %>
-        </div>
+            <div class="navbar-item">
+               <% if current_user %>
+               <%= link_to '<button type="button" class="button is-warning is-outlined"><span class="icon">
+                  <i class="fas fa-music"></i>
+                  </span>  &nbsp My Playlists</button>'.html_safe, "/playlists" %>
+               <% end %>
+            </div>
         <div class="navbar-end">
           <div class="navbar-item">
             <a class="button is-link is-outlined">
             <span class="icon is-small">
             <i class="fas fa-bell"></i>
             </span>
-            &nbsp Contact us</a>
+               &nbsp Contact us</a>
           </div>
           <div class="navbar-item">
             <% if !current_user %>
@@ -46,23 +46,29 @@
         </div>
       </div>
   </nav>
-  <% if current_user %>
-  <a class="button is-danger is-rounded" style="float: right; margin-right: 15px;">
-  <p> Signed in as  <strong><%= current_user.name %></strong>!</p>
-  <br>
-  </a>
-  <% end %>
+   <% if current_user %>
+      <div class="column is-7 is-offset-4">
+         <a class="button is-success" style="float: right; margin-right: 15px;">
+            <p> Signed in as  <strong><%= current_user.name %></strong>!</p>
+            <br>
+         </a>
+      </div>
+   <% end %>
   </div>
   <section class="section">
     <div class="container has-text-centered">
 
-
-<div class="columns is-mobile">
-  <div class="column is-three-fifths is-offset-one-fifth">    
-      <p class="title has-text-light"><%= @playlist.name %></p>
-        <%= link_to "<button class=\"button is-primary is-outlined is-centered\" > Edit </button>".html_safe , edit_playlist_path(@playlist) %>
-  </div>
-</div>
+      <div class="is-mobile">
+        <div class="is-three-fifths is-offset-one-fifth">    
+            <p class="title has-text-light"><%= @playlist.name %></p>
+              <%= link_to "<button class=\"button is-primary is-outlined is-centered\" > Edit </button>".html_safe , edit_playlist_path(@playlist) %>
+            <div class="tile is-parent">
+              <article class="tile is-child">
+                  <%= link_to "<button class=\"button is-success is-outlined is-centered\" > Add Song </button>".html_safe , new_song_path %>
+              </article>
+            </div>
+        </div>
+      </div>
 
       <% @playlist.songs.each do |song| %> 
       <div class="columns is-mobile">
@@ -79,53 +85,7 @@
       <% end %>
     </div>
   </section>
-  <section class="section columns">
-    <div class="container has-text-centered column is-10 is-offset-1">
-      <h2 class="title has-text-light">Contact</h2>
-      <form>
-        <div class="field is-horizontal">
-          <div class="field-body">
-            <div class="field">
-              <p class="control has-icons-left">
-                <input class="input" type="text" placeholder="Name">
-                <span class="icon is-small is-left">
-                <i class="fas fa-user"></i>
-                </span>
-              </p>
-            </div>
-            <div class="field">
-              <p class="control has-icons-left has-icons-right">
-                <input class="input" type="email" placeholder="Email">
-                <span class="icon is-small is-left">
-                <i class="fas fa-envelope"></i>
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="field is-horizontal">
-          <div class="field-body">
-            <div class="field">
-              <div class="control">
-                <textarea class="textarea" placeholder="Message us"></textarea>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="field is-horizontal">
-          <div class="field-body">
-            <div class="field">
-              <div class="control">
-                <button class="button is-primary">
-                Send message
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
-  </section>
+
   <footer class="footer">
     <div class="container">
       <div class="content has-text-centered">

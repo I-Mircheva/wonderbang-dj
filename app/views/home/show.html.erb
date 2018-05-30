@@ -4,7 +4,7 @@
    <nav class="navbar">
       <div class="container">
          <div class="navbar-brand">
-            <a href="#">
+            <a href="/">
             <img  class="navbar-item" src="https://image.ibb.co/m7RY3y/logo.png"  width="150" height="150">
             </a>
             <span class="navbar-burger burger" data-target="navbarMenu"  style=" color: hsl(348, 100%, 61%)">
@@ -13,7 +13,7 @@
             <span></span>
             </span>
          </div>
-         <div  id="navbarMenu" class="navbar-menu">
+         <div id="navbarMenu" class="navbar-menu">
             <div class="navbar-item">
                <% if current_user %>
                <%= link_to '<button type="button" class="button is-warning is-outlined"><span class="icon">
@@ -23,11 +23,12 @@
             </div>
             <div class="navbar-end">
                <div class="navbar-item">
-                  <a class="button is-link is-outlined">
-                  <span class="icon is-small">
-                  <i class="fas fa-bell"></i>
-                  </span>
-                  &nbsp Contact us</a>
+                        <a class="button is-primary is-outlined" href="#contact" data-target="contact">
+                        <span class="icon is-small">
+                        <i class="fas fa-bell"></i>
+                        </span>
+                        &nbsp Contact us
+                     </a>
                </div>
                <div class="navbar-item">
                   <% if !current_user %>
@@ -48,10 +49,12 @@
          </div>
    </nav>
    <% if current_user %>
-   <a class="button is-danger is-rounded" style="float: right; margin-right: 15px;">
-   <p> Signed in as  <strong><%= current_user.name %></strong>!</p>
-   <br>
-   </a>
+      <div class="column is-7 is-offset-4">
+         <a class="button is-success" style="float: right; margin-right: 15px;">
+            <p> Signed in as  <strong><%= current_user.name %></strong>!</p>
+            <br>
+         </a>
+      </div>
    <% end %>
    </div>
    <div class="hero-body">
@@ -66,12 +69,22 @@
          </div>
       </div>
    </div>
-   <div style="padding: 100px; padding-top: 100px;">
-      <a class="button is-primary is-outlined"style="position: absolute; float: center;" href="#information">
-      <span class="icon is-small">
-      <i class="fas fa-angle-double-down"></i>
-      </span>
-      &nbsp How to use</a>
+   <div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="container">
+         <a class="button is-primary is-outlined" href="#information">
+         <span class="icon is-small">
+         <i class="fas fa-angle-double-down"></i>
+         </span>
+         &nbsp How to use</a>
+      </div>
    </div>
    <div class="hero-body" id="information">
       <div class="container has-text-centered">
@@ -90,7 +103,77 @@
    <div class="resp-container">
       <iframe  class="resp-iframe"src="https://www.youtube.com/embed/uMK0prafzw0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
    </div>
+
+   <section class="section columns" id="contact">
+    <div class="container has-text-centered column is-10 is-offset-1">
+      <h2 class="title has-text-light">Contact</h2>
+      <form>
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input" type="text" placeholder="Name">
+                <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control has-icons-left has-icons-right">
+                <input class="input" type="email" placeholder="Email">
+                <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <textarea class="textarea" placeholder="Message us"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <button class="button is-primary">
+                Send message
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          <a href="">
+          <i class="fab fa-facebook-square fa-2x"></i>
+          </a>
+          <a href="">
+          <i class="fab fa-twitter-square fa-2x"></i>
+          </a>
+          <a href="">
+          <i class="fab fa-instagram fa-2x"></i>
+          </a>
+          <a href="">
+          <i class="fab fa-snapchat fa-2x"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
 </section>
+
 <script type="text/javascript">
    (function() {
      var burger = document.querySelector('.burger');

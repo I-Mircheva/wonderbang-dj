@@ -11,17 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :playlist_name %>
+
+  <div class="field has-text-light">
+  <p class="control">
+     <%= form.label "Playlist name" %>
+        <%= form.text_field :name, id: :playlist_name, class: "input" %>
+    </p>
   </div>
 
-  <div class="field">
+  <div class="field has-text-light">
+  <p class="control">
     <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :playlist_user_id %>
+    <%= form.text_field :user_id, id: :playlist_user_id , class: "input" %>
+    </p>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+
+<div class="actions has-text-light">
+  <p class="control">
+    <%= form.submit 'Add Playlist',  :class => 'button is-success' %>
+
+  </p>
+</div>
+<br>
+
 <% end %>

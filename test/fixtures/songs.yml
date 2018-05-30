@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  provider: 1
+  uuid: MyString
+  playlist: one
+
+two:
+  provider: 1
+  uuid: MyString
+  playlist: two

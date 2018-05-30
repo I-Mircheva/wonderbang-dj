@@ -1,0 +1,117 @@
+    <section class="hero is-fullheight has-bg-img">
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a href="#">
+                <img  class="navbar-item" src="https://image.ibb.co/m7RY3y/logo.png"  width="150" height="150">
+                </a>
+                <span class="navbar-burger burger" data-target="navbarMenu"  style=" color: hsl(348, 100%, 61%)">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </div>
+              <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-end">
+                  <div class="navbar-item">
+                    <a class="button is-link is-outlined">
+                      <span class="icon is-small">
+                        <i class="fas fa-bell"></i>
+                      </span>
+                &nbsp Contact us
+                    </a>
+                  </div>
+                  <div class="navbar-item"><% if !current_user %><%= link_to '
+                    <button type="button" class="button is-danger is-outlined">
+                      <span class="icon">
+                        <i class="fab fa-google"></i>
+                      </span>  &nbsp Sign in
+                    </button>'.html_safe, "/auth/google_oauth2", id: "sign_in" %><% else %><%= link_to '
+                    <button type="button" class="button is-danger is-outlined">Sign out</button>'.html_safe, signout_path, id: "sign_out" %><% end %>
+                  </div>
+                  <div class="navbar-item">
+                    <a class="button is-success is-outlined"  href="https://github.com/I-Mircheva/wonderbang-dj">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>&nbspGitHub</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+            <% if current_user %>
+            <a class="button is-danger is-rounded" style="float: right; margin-right: 15px;">
+              <p> Signed in as  
+                <strong>
+                  <%= current_user.name %>
+                </strong>!
+              </p>
+              <br>
+              </a>
+              <% end %>
+
+
+              <section class="section">
+                <div class="container has-text-centered">
+                  <div class="columns is-mobile">
+                    <div class="column is-three-fifths is-offset-one-fifth">
+                      <p class="has-text-light title"> All Of Your Playlists </p>
+                      <% current_user.playlists.each do |playlist| %>
+                        <div class="tile is-ancestor table">
+                          <div class="tile is-parent">
+                            <article class="tile is-child">
+                                <%= link_to "<h1 class=\"is-size-5 has-text-dark is-primary is-outlined is-centered\" > #{playlist.name} </h1>".html_safe , playlist %>
+                            </article>
+                          </div>
+                          <div class="tile is-parent">
+                            <article class="tile is-child">
+                                <%= link_to "<button class=\"button is-primary is-outlined is-centered\" > Edit it </button>".html_safe , edit_playlist_path(playlist) %>
+                            </article>
+                          </div>
+                          <div class="tile is-parent">
+                            <article class="tile is-child">
+                                <%= link_to "<button class=\"button is-danger is-outlined is-centered\" > Destroy </button>".html_safe , playlist, method: :delete, data: { confirm: 'Are you sure?' } %>
+                            </article>
+                          </div>
+                        </div>
+                      <% end %>
+                      <p>
+                      <%= link_to "<button class=\"button is-primary is-outlined is-centered\" > New Playlist </button>".html_safe , new_playlist_path%>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <script src="../js/bulma.js"></script>
+            </section>
+            <script type="text/javascript">
+      (function() {
+        var burger = document.querySelector('.burger');
+        var nav = document.querySelector('#'+burger.dataset.target);
+        burger.addEventListener('click', function(){
+          burger.classList.toggle('is-active');
+          nav.classList.toggle('is-active');
+        });
+      })();
+    </script>
+    
+    
+    
+    

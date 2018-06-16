@@ -93,7 +93,7 @@ Ex.: From `https://youtu.be/Udax_YlqMF8` paste only `Udax_YlqMF8`
 ## Authors
 
 * **Simeon Chakarov** - [simeonch7](https://github.com/simeonch7) 
-#### &
+&nbsp;&nbsp;&nbsp;&nbsp; &
 * **Ivona Mircheva** - [I-Mircheva](https://github.com/I-Mircheva)
 
 # Let's RAVE!

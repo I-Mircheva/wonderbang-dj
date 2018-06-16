@@ -86,14 +86,14 @@ Ex.: From `https://youtu.be/Udax_YlqMF8` paste only `Udax_YlqMF8`
 
 ## Built With
 
-* [Ruby](https://www.ruby-lang.org/en/) - The dynamic, open source programming language, focused on simplicity and productivity, perfect for our project :gem: 
+* [Ruby](https://www.ruby-lang.org/en/) - The dynamic, open source programming language, focused on simplicity and perfect for our project :gem: 
 * [Rails](https://rubyonrails.org/) - Used to create database-backed web application according to the Model-View-Controller (MVC) pattern :railway_track: 
 * [Bulma](https://bulma.io/) - Used for the minimalistic interface :art: 
 
 ## Authors
 
 * **Simeon Chakarov** - [simeonch7](https://github.com/simeonch7) 
-### &
+#### &
 * **Ivona Mircheva** - [I-Mircheva](https://github.com/I-Mircheva)
 
 # Let's RAVE!

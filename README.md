@@ -46,10 +46,15 @@ Our passion for music and the constant switching between (mainly) Spotify, YouTu
 With our simple user interface we are making it easier then ever to create your own playlist and add songs to it just with one click! 
 
 ## Benefits and Costs :money_with_wings: 
+ 
+Create a **free** account and you will be able to create unlimited custom private playlists. 
+ 
+No need to struggle with a single platform anymore. 
+ 
 (When we add public playlists) 
-Sharing your taste in music with your friends will be more awesome then ever.
-No need to struggle with a single platform anymore. Create a free account and you will be able to create countless custom privite playlists.
-And if you upgrade to Pro(Future development) you will also add pubic playlists to share with everyone just by copying a link. 
+Sharing your taste in music with your friends will be more awesome then ever. 
+ 
+And if you upgrade to Pro(Future development) you will also add pubic playlists to share with everyone just by copying a single link. 
 
 ## How to use it? 
 ### See our video 

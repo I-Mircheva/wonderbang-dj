@@ -72,15 +72,15 @@ Future developments :space_invader:
  
 4. Click ***Add a song*** and choose a platform 
  
-3. Then copy the song link the chosen video url 
+5. Then copy the song link the chosen video url 
  
 ![how to get song link](https://www.amoyshare.com/asset/article/youtube-song-downloader/image/copy-url.png) 
 
-4. And paste only the song id : 
+6. And paste only the song id : 
  
 Ex.: From `https://youtu.be/Udax_YlqMF8` paste only `Udax_YlqMF8` 
  
-5. Enjoy your work! :notes: 
+7. Enjoy your work! :notes: 
  
 
 ## Built With

@@ -1,60 +1,59 @@
 # [WonderBang DJ](https://wonderbang-dj.herokuapp.com) 
 
-WonderBangDJ is an **awesome [Rails](https://rubyonrails.org) platform** combining the best of [YouTube](https://www.youtube.com), [Spotify](https://open.spotify.com) and many others in the future.
+WonderBangDJ is an **awesome [Rails](https://rubyonrails.org) platform** currently combining the best of [YouTube](https://www.youtube.com) and [Spotify](https://open.spotify.com), but other platforms will be added soon.
 
 <a href="https://wonderbang-dj.herokuapp.com"><img src="https://scontent.fsof2-1.fna.fbcdn.net/v/t1.15752-9/35076716_2252625164762803_8340418174881103872_n.png?_nc_cat=0&oh=becdb791c64b602691632ee1d726e084&oe=5BA5CB36" alt="WonderbangDJ: A music platform" style="max-width:100%;" width="600" height="125"></a>
 
 ## Quick start
 
-WonderBangDJ is **constantly** in development! Try it out now:
+WonderBangDJ is an **actively developed** development! Try it now:
 
 ### Online in [Heroku](https://wonderbang-dj.herokuapp.com)
 
 **or**
 
-### Run it on local server by yourself!
+### Run it with local server! 
 
-0. Open a terminal and make sure you have [Rails](https://youtu.be/OHgXELONyTQ) :wink: 
+1. Open a terminal and make sure you have [Rails](https://youtu.be/OHgXELONyTQ) :wink:  
 
-1. Clone our repository 
+2. Clone the repository 
 ```sh
-git clone git@github.com:I-Mircheva/wonderbang-dj.git
+git clone git@github.com:I-Mircheva/wonderbang-dj.git 
 ```
-2. Go into its folder 
+3. Navigate to its folder 
 ```sh
-cd wonderbang-dj
+cd wonderbang-dj 
 ```
-3. Run a Rails server locally 
+4. Run a Rails server locally  
 ```sh
-rails s
+rails s 
 ```
-4. Go to your browser and paste 
+5. Open a browser and visit localhost 
 ```sh
-http://localhost:3000/
+http://localhost:3000/ 
 ```
 ## Project Title and Overview 
-We were inspired for the awesome name by the **Wonderful** ability of music to get under your skin and make your heart **Bang** harder! 
-And as our web application allows users to create playlists with video and audio clips from multiple platforms we proudly call it a **DJ**. :headphones: 
+The name is inspired by the **Wonderful** ability of music to get under your skin and make your heart **Bang** harder! 
+Our web application allows users to create playlists with video and audio clips from multiple platforms so we proudly call it a **DJ**. :headphones: 
 
 ## Purpose and Need 
-As we :heart: music so much it was a real struggle for us to have to change platforms just so you could listen to certain songs. 
+As we :heart: music we found it annoying to have to change platforms to listen to particular songs. 
 And haven't you ever had a thought like "Bang it! Why can't I combine songs into a playlist from more than one website?" 
-Well, You're welcome! It's already possible! We are here to make your dream come true! 
+Well, You're welcome! It's already possible! We are here to make your dream come true!
+
 
 ## Business Divers and Significance 
 Our passion for music and the constant switching between (mainly) Spotify, YouTube and Soundcloud inspired us to create this cool app. 
-With our simple user interface we are making it easier then ever to create your own playlist and add songs to it just with one click! 
+With a simple user interface we are making it easier than ever to create a personalised playlist and add songs with just one click! 
 
 ## Benefits and Costs :money_with_wings: 
  
-Create a **free** account and you will be able to create unlimited custom private playlists. 
+Make a **free** account to create unlimited custom private playlists. 
  
-No need to struggle with a single platform anymore. 
+Use a single care-free platform. 
  
-(When we add public playlists) 
-Sharing your taste in music with your friends will be more awesome then ever. 
- 
-And if you upgrade to Pro(Future development) you will also add pubic playlists to share with everyone just by copying a single link. 
+Future developments :space_invader: 
+* Pro Account: add public playlists to share with everyone just by copying a single link 
 
 ## How to use it? 
 ### See our video 
@@ -86,14 +85,14 @@ Ex.: From `https://youtu.be/Udax_YlqMF8` paste only `Udax_YlqMF8`
 
 ## Built With
 
-* [Ruby](https://www.ruby-lang.org/en/) - The dynamic, open source programming language, focused on simplicity and perfect for our project :gem: 
+* [Ruby](https://www.ruby-lang.org/en/) - The dynamic, open source programming language with focus on simplicity and productivity, perfect for our project :gem: 
 * [Rails](https://rubyonrails.org/) - Used to create database-backed web application according to the Model-View-Controller (MVC) pattern :railway_track: 
 * [Bulma](https://bulma.io/) - Used for the minimalistic interface :art: 
 
 ## Authors
 
-* **Simeon Chakarov** - [simeonch7](https://github.com/simeonch7)
-* **Ivona Mircheva** - [I-Mircheva](https://github.com/I-Mircheva)
+* **Simeon Chakarov** - [simeonch7](https://github.com/simeonch7) 
+* **Ivona Mircheva** - [I-Mircheva](https://github.com/I-Mircheva) 
 
 # Let's RAVE!
 

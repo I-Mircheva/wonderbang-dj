@@ -52,7 +52,7 @@ Future developments :space_invader:
 ## How to use it? 
 ### See our video 
 
-[![Watch the video](https://scontent.fsof2-1.fna.fbcdn.net/v/t1.15752-9/35076716_2252625164762803_8340418174881103872_n.png?_nc_cat=0&oh=becdb791c64b602691632ee1d726e084&oe=5BA5CB36)](https://youtu.be/8L1_wTQMnj4) 
+[![Watch the video](https://scontent-lht6-1.xx.fbcdn.net/v/t1.15752-9/67432493_989572661434329_7206860530328272896_n.png?_nc_cat=110&_nc_oc=AQk7FBkEDdJYu79hkC-HBA0Y_4ADOrnOmO3qmuD6MfVK5YjG04u5lSk4FCkeF1fbgnY&_nc_ht=scontent-lht6-1.xx&oh=1b13da555207c6235338e0531eb78ed2&oe=5DECB118)](https://www.youtube.com/embed/8L1_wTQMnj4) 
 
  **or**
 

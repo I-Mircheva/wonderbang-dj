@@ -90,4 +90,4 @@ Ex.: From `https://youtu.be/Udax_YlqMF8` paste only `Udax_YlqMF8`
 
 # Let's RAVE!
 
-<img src="https://scontent.fsof2-1.fna.fbcdn.net/v/t1.15752-9/35485989_2252718054753514_9046735545392168960_n.jpg?_nc_cat=0&oh=34ce702fdec2cf5491cd9ded62f40955&oe=5BA4E117" alt="DJ Jerry" style="max-width:100%;" width="641" height="480"></a>
+<img src="https://media1.giphy.com/media/1lyQJPjV28Wiu1QeiH/giphy.gif" alt="DJ Jerry" style="max-width:100%;" width="641" height="480"></a>

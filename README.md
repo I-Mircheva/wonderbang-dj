@@ -2,15 +2,9 @@
 
 WonderBangDJ is an **awesome [Rails](https://rubyonrails.org) platform** currently combining the best of [YouTube](https://www.youtube.com) and [Spotify](https://open.spotify.com), but other platforms will be added soon.
 
-<a href="https://wonderbang-dj.herokuapp.com"><img src="https://scontent.fsof2-1.fna.fbcdn.net/v/t1.15752-9/35076716_2252625164762803_8340418174881103872_n.png?_nc_cat=0&oh=becdb791c64b602691632ee1d726e084&oe=5BA5CB36" alt="WonderbangDJ: A music platform" style="max-width:100%;" width="600" height="125"></a>
-
 ## Quick start
 
 WonderBangDJ is an **actively developed** development! Try it now:
-
-### Online in [Heroku](https://wonderbang-dj.herokuapp.com)
-
-**or**
 
 ### Run it with local server! 
 
